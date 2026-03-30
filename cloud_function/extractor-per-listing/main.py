@@ -149,6 +149,32 @@ def parse_listing(text: str) -> dict:
     if mi is not None:
         d["mileage"] = mi
 
+     # --- Code for additional part added
+    patterns = {
+        "transmission": r"transmission:\s*([^\n\r]+)",
+        "fuel_type": r"fuel:\s*([^\n\r]+)",
+        "drive_type": r"drive:\s*([^\n\r]+)",
+        "vehicle_type": r"type:\s*([^\n\r]+)",
+        "paint_color": r"paint color:\s*([^\n\r]+)",
+        "condition": r"condition:\s*([^\n\r]+)",
+        "title_status": r"title status:\s*([^\n\r]+)",
+    }
+
+    for field, pattern in patterns.items():
+        m = re.search(pattern, text, re.I)
+        if m:
+            value = m.group(1).strip().lower()
+            if value:
+                d[field] = value
+# -----------------------------------------------------
+    # --- Code for cylinders has been added
+    m = re.search(r"cylinders:\s*(\d+)", text, re.I)
+    if m:
+        try:
+            d["cylinders"] = int(m.group(1))
+        except ValueError:
+            pass
+
     return d
 
 # -------------------- HTTP ENTRY --------------------
