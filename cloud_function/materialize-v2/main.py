@@ -118,7 +118,7 @@ def materialize_http(request: Request):
                     latest_by_post[pid] = rec
 
         base = f"{STRUCTURED_PREFIX}/datasets"
-        final_key = f"{base}/listings_master.csv"
+        final_key = f"{base}/listings_master_v2.csv" # v2 is added by me to get new records
         rows = _write_csv(latest_by_post.values(), final_key)
 
         return jsonify({
