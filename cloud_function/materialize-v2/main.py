@@ -96,7 +96,7 @@ def materialize_http(request: Request):
     """
     HTTP POST (no body needed).
     Crawls ALL structured run folders, de-dupes by post_id (keep newest run),
-    and writes one CSV directly to .../datasets/listings_master.csv.
+    and writes one CSV directly to .../datasets/listings_master_v2.csv.
     Returns JSON with counts and output path.
     """
     try:
