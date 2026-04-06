@@ -156,7 +156,7 @@ def _safe_int(x):
 # -------------------- VERTEX AI CALL --------------------
 def _vertex_extract_fields(raw_text: str) -> dict:
     """
-    Ask Gemini to return JSON with exactly: price, year, make, model, mileage.
+    Ask Gemini to return JSON with exactly: price, year, make, model, mileage, transmission.
     """
     model = _get_vertex_model()
 
@@ -171,7 +171,7 @@ def _vertex_extract_fields(raw_text: str) -> dict:
             "mileage": {"type": "integer", "nullable": True},
             "transmission": {"type": "string", "nullable": True},"
         },
-        "required": ["price", "year", "make", "model", "mileage","transmission"]
+        "required": ["price", "year", "make", "model", "mileage", "transmission"]
     }
 
     # System instruction (will be prepended to the prompt)
