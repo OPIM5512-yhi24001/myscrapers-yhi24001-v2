@@ -169,7 +169,7 @@ def _vertex_extract_fields(raw_text: str) -> dict:
             "make": {"type": "string", "nullable": True},
             "model": {"type": "string", "nullable": True},
             "mileage": {"type": "integer", "nullable": True},
-            "transmission": {"type": "string", "nullable": True},"
+            "transmission": {"type": "string", "nullable": True},
         },
         "required": ["price", "year", "make", "model", "mileage", "transmission"]
     }
