@@ -239,7 +239,10 @@ def _vertex_extract_fields(raw_text: str) -> dict:
 
     parsed["make"] = _norm_str(parsed.get("make"))
     parsed["model"] = _norm_str(parsed.get("model"))
-
+    parsed["color"] = _norm_str(parsed.get("color")) # new added part for project
+    parsed["city"] = _norm_str(parsed.get("city")) # new added part for project
+    parsed["state"] = _norm_str(parsed.get("state")) # new added part for project
+    parsed["zip_code"] = _norm_str(parsed.get("zip_code")) # new added part for project
     return parsed
 
 
