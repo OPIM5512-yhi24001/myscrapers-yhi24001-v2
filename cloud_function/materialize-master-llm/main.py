@@ -28,6 +28,7 @@ RUN_ID_PLAIN_RE = re.compile(r"^\d{14}$")        # 20251026170002
 CSV_COLUMNS = [
     "post_id", "run_id", "scraped_at",
     "price", "year", "make", "model", "mileage", "transmission",
+    "color", "city", "state", "zip_code",   # added lines for project
     "source_txt"
 ]
 
@@ -59,6 +60,11 @@ def _jsonl_records_for_run(bucket: str, structured_prefix: str, run_id: str):
             rec = json.loads(line)
             # ensure required keys exist
             rec.setdefault("run_id", run_id)
+            # Added lines for project
+            rec.setdefault("color",    None)
+            rec.setdefault("city",     None)
+            rec.setdefault("state",    None)
+            rec.setdefault("zip_code", None)
             yield rec
         except Exception:
             continue
@@ -116,7 +122,7 @@ def materialize_http(request: Request):
                     latest_by_post[pid] = rec
 
         base = f"{STRUCTURED_PREFIX}/datasets"
-        final_key = f"{base}/listings_master_llm.csv"
+        final_key = f"{base}/listings_master_llm_v2.csv"
         rows = _write_csv(latest_by_post.values(), final_key)
 
         return jsonify({
