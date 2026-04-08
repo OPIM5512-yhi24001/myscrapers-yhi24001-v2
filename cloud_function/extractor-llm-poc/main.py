@@ -170,8 +170,12 @@ def _vertex_extract_fields(raw_text: str) -> dict:
             "model": {"type": "string", "nullable": True},
             "mileage": {"type": "integer", "nullable": True},
             "transmission": {"type": "string", "nullable": True},
+            "color": {"type": "string", "nullable": True},       # new added part for project
+            "city": {"type": "string", "nullable": True},        # new added part for project
+            "state": {"type": "string", "nullable": True},       # new added part for project
+            "zip_code": {"type": "string", "nullable": True},    # new added part for project
         },
-        "required": ["price", "year", "make", "model", "mileage", "transmission"]
+        "required": ["price", "year", "make", "model", "mileage", "transmission", "color", "city", "state", "zip_code"] # new added part for project
     }
 
     # System instruction (will be prepended to the prompt)
@@ -180,6 +184,10 @@ def _vertex_extract_fields(raw_text: str) -> dict:
         "Return a strict JSON object that conforms to the provided schema. "
         "If a value is not present, use null. "
         "Rules: integers for price/year/mileage; price in USD; mileage in miles; "
+        "transmission must be 'automatic' or 'manual' or null; "
+        "color must be a single lowercase word (e.g. 'black', 'silver'); "  # new added part for project
+        "state must be a 2-letter uppercase US abbreviation (e.g. 'CA', 'TX'); "  # new added part for project
+        "zip_code must be a 5-digit string (e.g. '90210'); "  # new added part for project
         "do not infer values not explicitly present; do not add extra keys."
     )
 
@@ -320,6 +328,10 @@ def llm_extract_http(request: Request):
                 "model": parsed.get("model"),
                 "mileage": parsed.get("mileage"),
                 "transmission": parsed.get("transmission"),
+                "color": parsed.get("color"),        # new added part for project
+                "city": parsed.get("city"),          # new added part for project
+                "state": parsed.get("state"),        # new added part for project
+                "zip_code": parsed.get("zip_code"),  # new added part for project
                 "llm_provider": "vertex",
                 "llm_model": LLM_MODEL,
                 "llm_ts": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
