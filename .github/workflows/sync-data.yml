@@ -68,6 +68,15 @@ jobs:
           mkdir -p ${{ env.OUTPUT_DIR }} 
           gsutil cp gs://${BUCKET_NAME}/${GCS_SOURCE_FILE} ${LOCAL_TARGET_FILE}
           
+          # Added for project
+          if gsutil -q stat gs://${BUCKET_NAME}/${{ env.GCS_PREDS_PREFIX }}/$LATEST_RUN_ID/preds_llm.csv; then
+          gsutil cp gs://${BUCKET_NAME}/${{ env.GCS_PREDS_PREFIX }}/$LATEST_RUN_ID/preds_llm.csv \
+          ${{ env.OUTPUT_DIR }}/$LOCAL_FILENAME_LLM
+          echo "Copied preds_llm.csv"
+          else
+          echo "No preds_llm.csv yet, skipping"
+          fi
+
           echo "Successfully copied: gs://${BUCKET_NAME}/${GCS_SOURCE_FILE} to ${LOCAL_TARGET_FILE}"
 
       # --- 3. COMMIT AND PUSH ---
@@ -83,6 +92,7 @@ jobs:
           
           # Stage the newly created timestamped file
           git add ${{ env.OUTPUT_DIR }}/$FILENAME
+          git add ${{ env.OUTPUT_DIR }}/$FILENAME_LLM 2>/dev/null || true    # added for project
           
           # Commit the new file
           git commit -m "🤖 Data Sync: Add hourly prediction file for run $RUN_ID"
