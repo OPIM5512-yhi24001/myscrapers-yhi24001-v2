@@ -1,12 +1,12 @@
-name: Deploy LLM Extractor (CF Gen + Cloud Scheduler)
+name: Deploy Updated LLM Extractor (CF Gen + Cloud Scheduler)
 run-name: "LLM Extractor deploy by ${{ github.actor }} • ${{ github.ref_name }}"
 
 on:
   push:
     branches: [ main ]
     paths:
-      - 'cloud_function/extractor-llm-poc/**'
-      - '.github/workflows/deploy-extractor-llm.yml'
+      - 'cloud_function/extractor-llm-poc-updated/**'
+      - '.github/workflows/deploy-extractor-llm-updated.yml'
   workflow_dispatch: {}
 
 permissions:
@@ -16,8 +16,8 @@ permissions:
 env:
   PROJECT_ID: ${{ vars.PROJECT_ID }}
   REGION: ${{ vars.REGION }}
-  FUNCTION_NAME: extractor-llm-poc
-  FUNCTION_DIR: cloud_function/extractor-llm-poc
+  FUNCTION_NAME: extractor-llm-poc-updated
+  FUNCTION_DIR: cloud_function/extractor-llm-poc-updated
   ENTRY_POINT: llm_extract_http
   RUNTIME: python312
   BUCKET_NAME: ${{ vars.BUCKET_NAME }}
