@@ -1,4 +1,4 @@
-name: Deploy materialize-master (CF Gen2 + Cloud Scheduler)
+name: Deploy materialize-master-llm (CF Gen2 + Cloud Scheduler)
 
 on:
   workflow_dispatch:
