@@ -105,11 +105,11 @@ _SYS_INSTR = (
     "  - year:         4-digit integer model year\n"
     "  - mileage:      integer miles on the odometer\n"
     "  - transmission: 'automatic' | 'manual' | null\n"
-    "  - color:        single lowercase word, exterior paint (e.g. 'black', 'silver')\n"
+    "  - color: normalize to a basic color word (e.g. 'dark blue' → 'blue', 'metallic silver' → 'silver')"
     "  - city:         city name where car is located (title case)\n"
     "  - state:        2-letter UPPERCASE US state abbreviation (e.g. 'CA')\n"
     "  - zip_code:     5-digit string (e.g. '90210')\n"
-    "Do NOT infer values not explicitly present. Do NOT add extra keys."
+    "Extract values if they are explicitly stated OR clearly implied in the text (e.g., 'Hartford, CT' → city='Hartford', state='CT'). If a value cannot be reasonably determined, return null. Do NOT add extra keys."
 )
 
 
