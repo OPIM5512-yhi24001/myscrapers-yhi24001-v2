@@ -70,11 +70,11 @@ jobs:
           
           # Added for project
           if gsutil -q stat gs://${BUCKET_NAME}/${{ env.GCS_PREDS_PREFIX }}/$LATEST_RUN_ID/preds_llm.csv; then
-          gsutil cp gs://${BUCKET_NAME}/${{ env.GCS_PREDS_PREFIX }}/$LATEST_RUN_ID/preds_llm.csv \
-          ${{ env.OUTPUT_DIR }}/$LOCAL_FILENAME_LLM
-          echo "Copied preds_llm.csv"
+            gsutil cp gs://${BUCKET_NAME}/${{ env.GCS_PREDS_PREFIX }}/$LATEST_RUN_ID/preds_llm.csv \
+              ${{ env.OUTPUT_DIR }}/$LOCAL_FILENAME_LLM
+            echo "Copied preds_llm.csv"
           else
-          echo "No preds_llm.csv yet, skipping"
+            echo "No preds_llm.csv yet, skipping"
           fi
 
           echo "Successfully copied: gs://${BUCKET_NAME}/${GCS_SOURCE_FILE} to ${LOCAL_TARGET_FILE}"
@@ -88,6 +88,7 @@ jobs:
           
           # Retrieve variables from the previous step's output
           FILENAME="${{ steps.download_rename.outputs.filename }}"
+          FILENAME_LLM="${{ steps.download_rename.outputs.filename_llm }}"
           RUN_ID="${{ steps.download_rename.outputs.run_id }}"
           
           # Stage the newly created timestamped file
