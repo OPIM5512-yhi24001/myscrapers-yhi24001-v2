@@ -54,11 +54,13 @@ jobs:
 
           # 2c. Define file paths and save variables to GITHUB_OUTPUT
           LOCAL_FILENAME="$LATEST_RUN_ID-preds.csv"
+          LOCAL_FILENAME_LLM="$LATEST_RUN_ID-preds_llm.csv"    # added for project
           GCS_SOURCE_FILE="${{ env.GCS_PREDS_PREFIX }}/$LATEST_RUN_ID/preds.csv"
           LOCAL_TARGET_FILE="${{ env.OUTPUT_DIR }}/$LOCAL_FILENAME"
           
           echo "run_id=$LATEST_RUN_ID" >> "$GITHUB_OUTPUT"
           echo "filename=$LOCAL_FILENAME" >> "$GITHUB_OUTPUT"
+          echo "filename_llm=$LOCAL_FILENAME_LLM" >> "$GITHUB_OUTPUT"    # added for project
           
           echo "Detected latest run ID: $LATEST_RUN_ID"
           
