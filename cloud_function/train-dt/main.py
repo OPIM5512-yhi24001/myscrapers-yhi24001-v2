@@ -328,12 +328,15 @@ def run_once(dry_run=False, max_depth=12, min_samples_leaf=10):
                                      GCS_BUCKET, out_key_llm)
 
                 # Permutation importance + PDPs on holdout
+               
                 if not dry_run and not holdout_llm.empty:
+                    pi_mask = holdout_llm[target].notna()
                     imp_df = _save_permutation_importance(
                         client, pipe_llm,
-                        holdout_llm[feats_llm],
-                        holdout_llm[target],
+                        holdout_llm[feats_llm][pi_mask],
+                        holdout_llm[target][pi_mask],
                         feats_llm, out_folder,
+                    
                     )
                     _save_pdp_plots(
                         client, pipe_llm,
