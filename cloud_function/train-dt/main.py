@@ -263,7 +263,7 @@ def run_once(dry_run=False, max_depth=12, min_samples_leaf=10):
                 feats_llm    = cat_cols_llm + num_cols_llm
 
                 # Fill missing new columns
-                for c in ["transmission", "color", "state", "city"]:
+                for c in ["transmission", "color", "state", "city", "zip_code"]:
                     if c not in train_llm.columns:
                         train_llm[c] = "unknown"
                     if c not in holdout_llm.columns:
