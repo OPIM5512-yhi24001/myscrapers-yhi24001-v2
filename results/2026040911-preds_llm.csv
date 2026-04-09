@@ -1,0 +1,211 @@
+post_id,scraped_at,make,model,year,mileage,price,transmission,color,state,zip_code,city,actual_price,pred_price
+7922888909,2026-04-09T08:00:28Z,Dodge,Neon,2002,150000.0,3288.0,automatic,unknown,unknown,unknown,unknown,3288.0,10327.6
+7922899953,2026-04-09T09:00:38Z,subaru,forester,2023,113437.0,19900.0,automatic,unknown,unknown,unknown,unknown,19900.0,12084.93
+7922959941,2026-04-09T10:00:37Z,chevrolet,camaro,1976,139000.0,25000.0,automatic,unknown,unknown,unknown,unknown,25000.0,19994.56
+7922970432,2026-04-09T10:00:37Z,Mercedes-Benz,S500 4Matic,2004,80982.0,8995.0,automatic,unknown,unknown,unknown,unknown,8995.0,12035.61
+7923015219,2026-04-09T09:00:38Z,Nissan,Altima SL,2010,163117.0,4500.0,automatic,unknown,unknown,unknown,unknown,4500.0,11477.08
+7923549869,2026-04-09T04:00:32Z,Acura,3.5RL,2001,121327.0,4300.0,automatic,unknown,unknown,unknown,unknown,4300.0,11794.72
+7923649180,2026-04-09T06:00:30Z,ram,promaster 2500,2020,46300.0,26500.0,automatic,unknown,unknown,unknown,unknown,26500.0,12945.74
+7923650746,2026-04-09T09:00:38Z,chevy,express 2500,2011,200000.0,3300.0,manual,unknown,unknown,unknown,unknown,3300.0,12774.48
+7923778321,2026-04-09T05:00:40Z,CHEVROLET,COBALT,2009,140000.0,3000.0,automatic,unknown,unknown,unknown,unknown,3000.0,11990.0
+7923838194,2026-04-09T05:00:40Z,Subaru,Outback,2018,136170.0,13998.0,automatic,unknown,unknown,unknown,unknown,13998.0,12069.36
+7923932390,2026-04-09T06:00:30Z,subaru,outback 2.5i premium,2011,190000.0,3750.0,automatic,unknown,unknown,unknown,unknown,3750.0,11357.3
+7924043271,2026-04-09T10:00:37Z,chevrolet,avalanche 1500 ltz 4x4,2005,215000.0,5800.0,automatic,unknown,unknown,unknown,unknown,5800.0,11768.84
+7924070156,2026-04-09T07:00:18Z,Jeep,Liberty,2012,114000.0,6885.0,automatic,unknown,unknown,unknown,unknown,6885.0,11674.87
+7924224802,2026-04-09T10:00:37Z,chevy,cruze,2013,85000.0,5495.0,automatic,unknown,unknown,unknown,unknown,5495.0,11425.41
+7922888763,2026-04-09T04:00:32Z,buick,park avenue ultra,2005,104000.0,2800.0,automatic,unknown,unknown,unknown,unknown,2800.0,11860.12
+7922955918,2026-04-09T07:00:18Z,Ford,Mustang Convertible,2000,197000.0,3900.0,manual,unknown,unknown,unknown,unknown,3900.0,13688.41
+7923005029,2026-04-09T08:00:28Z,mazda,5,2012,172000.0,3800.0,automatic,unknown,unknown,unknown,unknown,3800.0,11714.04
+7923277819,2026-04-09T10:00:37Z,Acura,RDX SH-AWD,2008,131799.0,7995.0,automatic,unknown,unknown,unknown,unknown,7995.0,11730.25
+7923327561,2026-04-09T05:00:40Z,Dodge,Neon,2002,150000.0,3288.0,automatic,unknown,unknown,unknown,unknown,3288.0,10327.6
+7923722098,2026-04-09T10:00:37Z,Chrysler,Town & Country,2015,51345.0,28900.0,automatic,unknown,unknown,unknown,unknown,28900.0,12197.16
+7923844048,2026-04-09T06:00:30Z,dodge,grand caravan sxt,2016,180000.0,5000.0,automatic,unknown,unknown,unknown,unknown,5000.0,11719.57
+7922811843,2026-04-09T09:00:38Z,chevy,malibu,2011,165000.0,2999.0,automatic,unknown,unknown,unknown,unknown,2999.0,11294.8
+7922813137,2026-04-09T04:00:32Z,honda,accord,2009,120000.0,5999.0,automatic,unknown,unknown,unknown,unknown,5999.0,11731.6
+7923189849,2026-04-09T05:00:40Z,honda,civic,2015,74500.0,9000.0,automatic,unknown,unknown,unknown,unknown,9000.0,12166.83
+7923252224,2026-04-09T10:00:37Z,hyundia,elantra,2010,133500.0,3300.0,automatic,unknown,unknown,unknown,unknown,3300.0,11730.25
+7923254716,2026-04-09T10:00:37Z,HYANDIA,ELECTRA,2010,133500.0,3300.0,automatic,unknown,unknown,unknown,unknown,3300.0,11730.25
+7923278051,2026-04-09T09:00:38Z,nissan,maxima sv,2014,117455.0,6488.0,automatic,unknown,unknown,unknown,unknown,6488.0,11479.65
+7923627347,2026-04-09T10:00:37Z,volkswagen,tiguan,2023,22500.0,20000.0,automatic,unknown,unknown,unknown,unknown,20000.0,14441.94
+7923882371,2026-04-09T09:00:38Z,lexus,nx 300,2021,125753.0,21900.0,automatic,unknown,unknown,unknown,unknown,21900.0,12517.36
+7923911742,2026-04-09T09:00:38Z,ford,ranger,2000,104000.0,3500.0,automatic,unknown,unknown,unknown,unknown,3500.0,11582.6
+7923916683,2026-04-09T08:00:28Z,audi,a3,2016,161000.0,1600.0,automatic,unknown,unknown,unknown,unknown,1600.0,11728.16
+7924159050,2026-04-09T09:00:38Z,ford,mustang,1967,,5000.0,manual,unknown,unknown,unknown,unknown,5000.0,21233.27
+7922939454,2026-04-09T07:00:18Z,RAM,PROMASTER 2500,2024,25.0,88993.0,automatic,unknown,unknown,unknown,unknown,88993.0,19420.28
+7923855738,2026-04-09T06:00:30Z,acura,tl,2008,144000.0,3800.0,unknown,unknown,unknown,unknown,unknown,3800.0,11372.8
+7924057907,2026-04-09T04:00:32Z,Ford,Mini-T HR Campervan,2025,87.0,139500.0,automatic,unknown,unknown,unknown,unknown,139500.0,19669.84
+7922813805,2026-04-09T08:00:28Z,honda,accord,2015,149000.0,7500.0,automatic,unknown,unknown,unknown,unknown,7500.0,11728.16
+7923204921,2026-04-09T08:00:28Z,Volvo,262C Bertone,1978,100000.0,6500.0,manual,unknown,unknown,unknown,unknown,6500.0,19082.86
+7923518061,2026-04-09T06:00:30Z,Nissan,Pathfinder,2016,114000.0,9885.0,automatic,unknown,unknown,unknown,unknown,9885.0,11513.12
+7923842626,2026-04-09T10:00:37Z,chrysler,town and country limited,2013,163000.0,4900.0,automatic,unknown,unknown,unknown,unknown,4900.0,11722.63
+7923846364,2026-04-09T10:00:37Z,jeep,wrangler sport,2014,163000.0,8000.0,manual,unknown,unknown,unknown,unknown,8000.0,13222.29
+7923948552,2026-04-09T04:00:32Z,Hyundai,Elantra,2013,114100.0,6800.0,automatic,unknown,unknown,unknown,unknown,6800.0,11704.28
+7924074050,2026-04-09T08:00:28Z,toyota,sienna,2015,159707.0,12900.0,automatic,unknown,unknown,unknown,unknown,12900.0,11728.16
+7923269589,2026-04-09T10:00:37Z,Cadillac,ATS Sedan,2015,80600.0,13800.0,automatic,unknown,unknown,unknown,unknown,13800.0,11976.51
+7923484982,2026-04-09T10:00:37Z,toyota,camry le,2009,72000.0,9000.0,automatic,unknown,unknown,unknown,unknown,9000.0,12161.31
+7923854316,2026-04-09T06:00:30Z,chevy,silverado,2004,188000.0,3500.0,automatic,unknown,unknown,unknown,unknown,3500.0,11349.6
+7924093354,2026-04-09T09:00:38Z,Subaru,outback 3.6,2017,80000.0,21000.0,automatic,unknown,unknown,unknown,unknown,21000.0,12144.64
+7922970700,2026-04-09T09:00:38Z,jeep,grand cherokee overland,2011,135168.0,,automatic,unknown,unknown,unknown,unknown,,11730.25
+7923062721,2026-04-09T09:00:38Z,Honda,Civic,2013,112885.0,7999.0,automatic,unknown,unknown,unknown,unknown,7999.0,11464.92
+7923896699,2026-04-09T07:00:18Z,chevy,impala SS,2006,111000.0,6000.0,automatic,unknown,unknown,unknown,unknown,6000.0,11343.66
+7923189477,2026-04-09T06:00:30Z,Lexus,RX 350,2013,168000.0,9800.0,automatic,unknown,unknown,unknown,unknown,9800.0,13035.83
+7923269564,2026-04-09T10:00:37Z,Audi,Q5,2014,129400.0,9800.0,automatic,unknown,unknown,unknown,unknown,9800.0,11777.04
+7923838233,2026-04-09T09:00:38Z,Subaru,Outback,2015,174302.0,9998.0,automatic,unknown,unknown,unknown,unknown,9998.0,11352.92
+7924005476,2026-04-09T07:00:18Z,Dodge,Neon,2002,150000.0,3288.0,automatic,unknown,unknown,unknown,unknown,3288.0,10327.6
+7924073272,2026-04-09T09:00:38Z,BMW,328i Xdrive Sedan,2011,96000.0,7485.0,automatic,unknown,unknown,unknown,unknown,7485.0,11775.45
+7923573368,2026-04-09T06:00:30Z,nissan,altima,2013,103000.0,9500.0,automatic,unknown,unknown,unknown,unknown,9500.0,11545.6
+7923948525,2026-04-09T04:00:32Z,Ford,Edge,2018,137100.0,10800.0,automatic,unknown,unknown,unknown,unknown,10800.0,13144.78
+7923269508,2026-04-09T06:00:30Z,Chevrolet,Equinox,2018,135100.0,12800.0,automatic,unknown,unknown,unknown,unknown,12800.0,14052.97
+7924240885,2026-04-09T07:00:18Z,Mini,Cooper S,2008,134000.0,3500.0,automatic,unknown,unknown,unknown,unknown,3500.0,11730.25
+7923687600,2026-04-09T10:00:37Z,Mercedes-Benz,GL 450 4MATIC,2015,124948.0,10950.0,automatic,unknown,unknown,unknown,unknown,10950.0,11750.16
+7922869991,2026-04-09T10:00:37Z,Ram,ProMaster 2500,2017,173128.0,14500.0,automatic,unknown,unknown,unknown,unknown,14500.0,12232.33
+7923202182,2026-04-09T09:00:38Z,Chevy,El Camino,1986,1234567.0,6000.0,automatic,unknown,unknown,unknown,unknown,6000.0,12362.39
+7923269477,2026-04-09T09:00:38Z,Mazda,CX-5,2014,99800.0,12800.0,automatic,unknown,unknown,unknown,unknown,12800.0,11813.09
+7923269623,2026-04-09T04:00:32Z,BMW,5 Series,2016,100300.0,14800.0,automatic,unknown,unknown,unknown,unknown,14800.0,11780.97
+7922714644,2026-04-09T10:00:37Z,chevy,box truck,2007,66000.0,7500.0,automatic,unknown,unknown,unknown,unknown,7500.0,11681.72
+7922731916,2026-04-09T08:00:28Z,Ford,F-350 Super Duty,2005,312000.0,14900.0,automatic,unknown,unknown,unknown,unknown,14900.0,12262.69
+7923207597,2026-04-09T07:00:18Z,subaru,outback 3.6r limited awd wgn,2015,179079.0,7400.0,automatic,unknown,unknown,unknown,unknown,7400.0,11362.83
+7922764895,2026-04-09T10:00:37Z,saab,9-3 convertible,2006,145000.0,3200.0,automatic,unknown,unknown,unknown,unknown,3200.0,11760.32
+7924262826,2026-04-09T08:00:28Z,Volvo,240,1990,252300.0,1200.0,automatic,unknown,unknown,unknown,unknown,1200.0,12127.84
+7924338874,2026-04-09T04:00:32Z,honda,civic,2012,136000.0,3500.0,automatic,unknown,unknown,unknown,unknown,3500.0,11730.25
+7924302745,2026-04-09T10:00:37Z,toyota,land cruiser,2001,273000.0,4000.0,automatic,unknown,unknown,unknown,unknown,4000.0,11778.51
+7924376322,2026-04-09T09:00:38Z,Dodge,Neon,2002,150000.0,,automatic,unknown,unknown,unknown,unknown,,10327.6
+7924386182,2026-04-09T07:00:18Z,TOYOTA,CAMRY SE,2012,93250.0,13800.0,automatic,unknown,unknown,unknown,unknown,13800.0,11805.32
+7924445814,2026-04-09T09:00:38Z,ram,promaster city,2019,201000.0,8500.0,automatic,unknown,unknown,unknown,unknown,8500.0,12505.53
+7924494256,2026-04-09T04:00:32Z,chevrolet,impala lt,2007,136320.0,2995.0,automatic,unknown,unknown,unknown,unknown,2995.0,11730.25
+7924444719,2026-04-09T10:00:37Z,Subaru,Outback,2012,130671.0,8998.0,automatic,unknown,unknown,unknown,unknown,8998.0,11357.86
+7924562729,2026-04-09T10:00:37Z,subaru,outback,2011,150000.0,6000.0,automatic,unknown,unknown,unknown,unknown,6000.0,11365.9
+7924599111,2026-04-09T08:00:28Z,ford,ranger xlt,2002,131000.0,10299.0,automatic,unknown,unknown,unknown,unknown,10299.0,11507.53
+7924615716,2026-04-09T09:00:38Z,mercedes benz,s430,2002,200000.0,2500.0,automatic,unknown,unknown,unknown,unknown,2500.0,11778.51
+7924666742,2026-04-09T08:00:28Z,Chevrolet,Silverado 1500,2015,126474.0,15900.0,automatic,unknown,unknown,unknown,unknown,15900.0,13532.72
+7924685857,2026-04-09T06:00:30Z,Chevrolet,Express 2500 Cargo,2010,280000.0,4800.0,automatic,unknown,unknown,unknown,unknown,4800.0,13399.92
+7924666673,2026-04-09T06:00:30Z,Land Rover,Range Rover Sport,2018,93146.0,20950.0,automatic,unknown,unknown,unknown,unknown,20950.0,12586.34
+7924685016,2026-04-09T10:00:37Z,chevy,camaro z28,1997,130000.0,15900.0,automatic,unknown,unknown,unknown,unknown,15900.0,11501.2
+7924752722,2026-04-09T09:00:38Z,chevy,express 3500,2008,170484.0,8995.0,automatic,unknown,unknown,unknown,unknown,8995.0,11294.8
+7924639916,2026-04-09T09:00:38Z,nissan,quest sl,2006,135000.0,2000.0,automatic,unknown,unknown,unknown,unknown,2000.0,11501.83
+7924687780,2026-04-09T08:00:28Z,honda,civic ex,2014,150000.0,6999.0,automatic,unknown,unknown,unknown,unknown,6999.0,11730.4
+7924825235,2026-04-09T09:00:38Z,honda,civic lx,2012,159543.0,5995.0,automatic,unknown,unknown,unknown,unknown,5995.0,11722.63
+7924810376,2026-04-09T08:00:28Z,Mercedes-Benz,Sprinter 3500,2016,200489.0,12000.0,automatic,unknown,unknown,unknown,unknown,12000.0,11729.39
+7924892871,2026-04-09T09:00:38Z,toyota,tundra,2011,190000.0,7500.0,automatic,unknown,unknown,unknown,unknown,7500.0,11714.04
+7925022585,2026-04-09T08:00:28Z,Saturn,Vue,2007,165000.0,3900.0,automatic,unknown,unknown,unknown,unknown,3900.0,11714.04
+7924922065,2026-04-09T07:00:18Z,Ford,F150,1987,79000.0,7500.0,manual,unknown,unknown,unknown,unknown,7500.0,13744.54
+7925043371,2026-04-09T09:00:38Z,chevy,equinox lt,2012,160000.0,5000.0,automatic,unknown,unknown,unknown,unknown,5000.0,11303.39
+7923488225,2026-04-09T09:00:38Z,Saturn,Vue,2007,165000.0,6700.0,automatic,unknown,unknown,unknown,unknown,6700.0,11714.04
+7925055107,2026-04-09T07:00:18Z,Dodge,Neon,2002,150000.0,3288.0,automatic,unknown,unknown,unknown,unknown,3288.0,10327.6
+7925003013,2026-04-09T07:00:18Z,Jaguar,MK V Drophead coupe,1950,51000.0,85000.0,manual,unknown,unknown,unknown,unknown,85000.0,24002.5
+7925112720,2026-04-09T09:00:38Z,BMW,Z3 Roadster,2001,79700.0,14000.0,automatic,unknown,unknown,unknown,unknown,14000.0,11993.5
+7925184822,2026-04-09T06:00:30Z,ford,focus se,2017,56588.0,8300.0,automatic,unknown,unknown,unknown,unknown,8300.0,12308.61
+7925084301,2026-04-09T08:00:28Z,ford,e-450,2013,164000.0,44995.0,automatic,unknown,unknown,unknown,unknown,44995.0,11435.45
+7925231411,2026-04-09T07:00:18Z,chevrolet,silverado 2500hd,2001,246000.0,5000.0,automatic,unknown,unknown,unknown,unknown,5000.0,11778.51
+7923562891,2026-04-09T09:00:38Z,Ford,Ranger XLT,2005,142350.0,8000.0,manual,unknown,unknown,unknown,unknown,8000.0,13715.98
+7925234660,2026-04-09T06:00:30Z,ford,fusion titanium,2016,199000.0,4500.0,automatic,unknown,unknown,unknown,unknown,4500.0,11426.85
+7925286956,2026-04-09T06:00:30Z,jeep,wrangler yj,1995,174000.0,5000.0,manual,unknown,unknown,unknown,unknown,5000.0,13271.14
+7925305513,2026-04-09T05:00:40Z,Land Rover,Range Rover Sport,2017,95262.0,16900.0,automatic,unknown,unknown,unknown,unknown,16900.0,12332.15
+7925305560,2026-04-09T10:00:37Z,Land Rover,Range Rover,2018,101615.0,31900.0,automatic,unknown,unknown,unknown,unknown,31900.0,12577.59
+7925251829,2026-04-09T09:00:38Z,Volvo,XC60 T5 Premier AWD SUV,2016,126000.0,8885.0,automatic,unknown,unknown,unknown,unknown,8885.0,11740.33
+7925336798,2026-04-09T10:00:37Z,Subaru,Forester,2015,132799.0,10998.0,automatic,unknown,unknown,unknown,unknown,10998.0,11426.57
+7925336756,2026-04-09T06:00:30Z,Subaru,Legacy,2017,124781.0,10998.0,automatic,unknown,unknown,unknown,unknown,10998.0,11919.76
+7925355433,2026-04-09T09:00:38Z,Chevy,Chevette,1978,75000.0,5500.0,automatic,unknown,unknown,unknown,unknown,5500.0,18483.84
+7925354008,2026-04-09T09:00:38Z,hyundai,elantra,2013,130000.0,4700.0,automatic,unknown,unknown,unknown,unknown,4700.0,11730.25
+7925348581,2026-04-09T10:00:37Z,BMW,528i x-drive Premium Sedan,2012,71000.0,7985.0,automatic,unknown,unknown,unknown,unknown,7985.0,12119.35
+7925357523,2026-04-09T09:00:38Z,toyota,corolla,2008,222789.0,2400.0,automatic,unknown,unknown,unknown,unknown,2400.0,11714.04
+7925411755,2026-04-09T07:00:18Z,volkswagen,passat,2008,158000.0,2000.0,manual,unknown,unknown,unknown,unknown,2000.0,13216.48
+7925423031,2026-04-09T08:00:28Z,Acura,TLX TYPE S,2022,24000.0,,automatic,unknown,unknown,unknown,unknown,,13890.28
+7925348793,2026-04-09T04:00:32Z,Mercedes-Benz,GLK350,2015,130000.0,9885.0,automatic,unknown,unknown,unknown,unknown,9885.0,11750.16
+7925356182,2026-04-09T09:00:38Z,audi,a6 premium plus,2019,42250.0,17000.0,automatic,unknown,unknown,unknown,unknown,17000.0,12958.6
+7925501885,2026-04-09T04:00:32Z,Dodge,Neon,2002,150000.0,3288.0,automatic,unknown,unknown,unknown,unknown,3288.0,10327.6
+7925445118,2026-04-09T08:00:28Z,ford,ranger,2000,50000.0,6500.0,automatic,unknown,unknown,unknown,unknown,6500.0,12016.24
+7925559046,2026-04-09T10:00:37Z,infinity,qx56,2010,128000.0,6200.0,automatic,unknown,unknown,unknown,unknown,6200.0,11730.25
+7925133149,2026-04-09T10:00:37Z,ford,Elite,1976,40000.0,4000.0,automatic,unknown,unknown,unknown,unknown,4000.0,19795.58
+7925591785,2026-04-09T10:00:37Z,Porsche,Macan,2017,78600.0,18300.0,automatic,unknown,unknown,unknown,unknown,18300.0,12482.89
+7925618922,2026-04-09T08:00:28Z,Volkswagen,Passat SE,2014,85972.0,8900.0,automatic,unknown,unknown,unknown,unknown,8900.0,11866.3
+7925619053,2026-04-09T09:00:38Z,Ford,Fiesta S,2016,88133.0,5900.0,automatic,unknown,unknown,unknown,unknown,5900.0,12291.2
+7925568443,2026-04-09T05:00:40Z,Subaru,Outback,2016,136978.0,11998.0,automatic,unknown,unknown,unknown,unknown,11998.0,11389.36
+7925596210,2026-04-09T10:00:37Z,Ram,3500,2016,142654.0,29900.0,automatic,unknown,unknown,unknown,unknown,29900.0,11734.54
+7925601983,2026-04-09T06:00:30Z,Hyundai,Kona,2019,145143.0,8975.0,automatic,unknown,unknown,unknown,unknown,8975.0,12430.93
+7925617373,2026-04-09T08:00:28Z,Kia,Soul GL,2014,123296.0,5900.0,automatic,unknown,unknown,unknown,unknown,5900.0,11738.02
+7925617922,2026-04-09T09:00:38Z,Jeep,Cherokee Latitude,2015,81802.0,9900.0,automatic,unknown,unknown,unknown,unknown,9900.0,11919.78
+7925662162,2026-04-09T10:00:37Z,toyota,highlander,2003,258000.0,1800.0,automatic,unknown,unknown,unknown,unknown,1800.0,11768.84
+7925619387,2026-04-09T05:00:40Z,chevy,silverado 1500,2016,90000.0,2000.0,automatic,unknown,unknown,unknown,unknown,2000.0,11063.88
+7925619188,2026-04-09T07:00:18Z,Subaru,Crosstrek,2018,173000.0,9900.0,automatic,unknown,unknown,unknown,unknown,9900.0,12098.98
+7925637008,2026-04-09T07:00:18Z,Jeep,Grand Cherokee Laredo,2006,130000.0,3950.0,automatic,unknown,unknown,unknown,unknown,3950.0,11704.82
+7925617529,2026-04-09T10:00:37Z,Hyundai,Elantra,2019,121000.0,7900.0,automatic,unknown,unknown,unknown,unknown,7900.0,12447.72
+7925618560,2026-04-09T08:00:28Z,Subaru,XV Crosstrek,2014,124824.0,10900.0,automatic,unknown,unknown,unknown,unknown,10900.0,11435.61
+7925618752,2026-04-09T07:00:18Z,Hyundai,Sonata,2014,118290.0,7900.0,automatic,unknown,unknown,unknown,unknown,7900.0,11711.37
+7925661646,2026-04-09T05:00:40Z,Chevy,El Camino,1986,1234567.0,6000.0,automatic,unknown,unknown,unknown,unknown,6000.0,12362.39
+7925673628,2026-04-09T05:00:40Z,volkswagen,jetta,2010,191000.0,3500.0,manual,unknown,unknown,unknown,unknown,3500.0,13207.89
+7925596287,2026-04-09T08:00:28Z,Chevrolet,Silverado 1500,2012,130790.0,14950.0,automatic,unknown,unknown,unknown,unknown,14950.0,13494.34
+7925718503,2026-04-09T08:00:28Z,subaru,impreza wagon,2016,59000.0,13000.0,automatic,unknown,unknown,unknown,unknown,13000.0,11814.45
+7925683896,2026-04-09T07:00:18Z,Dodge,Neon,2002,150000.0,3288.0,automatic,unknown,unknown,unknown,unknown,3288.0,10327.6
+7925751059,2026-04-09T08:00:28Z,audi,a4 2.0t quattro,2009,114115.0,6000.0,automatic,unknown,unknown,unknown,unknown,6000.0,11731.6
+7925776266,2026-04-09T06:00:30Z,Toyota,Camry,2018,33000.0,2000.0,automatic,unknown,unknown,unknown,unknown,2000.0,12923.03
+7925750254,2026-04-09T10:00:37Z,chevrolet,trax ls,2016,81652.0,7500.0,automatic,unknown,unknown,unknown,unknown,7500.0,11976.51
+7925757414,2026-04-09T04:00:32Z,mitsubishi,fuso,2017,33587.0,34500.0,automatic,unknown,unknown,unknown,unknown,34500.0,12712.48
+7925776464,2026-04-09T08:00:28Z,honda,accord,2020,20000.0,2000.0,automatic,unknown,unknown,unknown,unknown,2000.0,14515.89
+7925776466,2026-04-09T05:00:40Z,Acura,TLX a-spec,2018,30000.0,,automatic,unknown,unknown,unknown,unknown,,12918.79
+7925765296,2026-04-09T04:00:32Z,kia,sportage,2015,128879.0,7500.0,automatic,unknown,unknown,unknown,unknown,7500.0,11740.33
+7925776290,2026-04-09T09:00:38Z,tesla,Model Y,2021,61000.0,5000.0,automatic,unknown,unknown,unknown,unknown,5000.0,12915.41
+7925862253,2026-04-09T04:00:32Z,Jeep,Cherokee Trailhawk,2017,92000.0,11500.0,automatic,unknown,unknown,unknown,unknown,11500.0,12275.43
+7925830296,2026-04-09T05:00:40Z,Chrysler,Pacifica,2026,25.0,74495.0,automatic,unknown,unknown,unknown,unknown,74495.0,19420.28
+7925854156,2026-04-09T08:00:28Z,Dodge,Neon,2002,150000.0,3288.0,automatic,unknown,unknown,unknown,unknown,3288.0,10327.6
+7925870629,2026-04-09T07:00:18Z,Bedrock,,2022,1000.0,3500.0,unknown,unknown,unknown,unknown,unknown,3500.0,17668.76
+7925890251,2026-04-09T10:00:37Z,jeep,grand cherokee,2019,90000.0,,automatic,unknown,unknown,unknown,unknown,,12614.1
+7925869882,2026-04-09T08:00:28Z,Mitsubishi,1800 cab chassis,2009,220000.0,8000.0,automatic,unknown,unknown,unknown,unknown,8000.0,11714.04
+7925909872,2026-04-09T09:00:38Z,Ford,Fusion,2020,35125.0,14850.0,automatic,unknown,unknown,unknown,unknown,14850.0,13432.96
+7925909885,2026-04-09T07:00:18Z,Mercedes-Benz,GLK-Class,2015,123897.0,8900.0,automatic,unknown,unknown,unknown,unknown,8900.0,11750.16
+7925910242,2026-04-09T10:00:37Z,honda,civic sedan,2015,130759.0,9400.0,automatic,unknown,unknown,unknown,unknown,9400.0,11740.33
+7925871301,2026-04-09T08:00:28Z,Saab,900,1991,216000.0,900.0,manual,unknown,unknown,unknown,unknown,900.0,13315.32
+7925909861,2026-04-09T07:00:18Z,Ford,F-150,2017,106743.0,18995.0,automatic,unknown,unknown,unknown,unknown,18995.0,13270.51
+7925910025,2026-04-09T09:00:38Z,chevrolet,camaro,1969,4664.0,59000.0,automatic,unknown,unknown,unknown,unknown,59000.0,27787.34
+7925909032,2026-04-09T10:00:37Z,Lexus,GS 300,2006,131986.0,8900.0,automatic,unknown,unknown,unknown,unknown,8900.0,13028.94
+7925910197,2026-04-09T10:00:37Z,Audi,A4,2019,71241.0,15900.0,automatic,unknown,unknown,unknown,unknown,15900.0,12967.3
+7925910231,2026-04-09T10:00:37Z,Nissan,Rogue,2020,82675.0,13800.0,automatic,unknown,unknown,unknown,unknown,13800.0,12334.89
+7925908827,2026-04-09T08:00:28Z,Toyota,Avalon Hybrid,2013,100775.0,14800.0,automatic,unknown,unknown,unknown,unknown,14800.0,11801.11
+7925909044,2026-04-09T10:00:37Z,Honda,Pilot,2016,120070.0,12990.0,automatic,unknown,unknown,unknown,unknown,12990.0,11516.57
+7925909851,2026-04-09T10:00:37Z,Hyundai,Elantra N Line DCT,2023,108905.0,16750.0,automatic,unknown,unknown,unknown,unknown,16750.0,12470.86
+7925909939,2026-04-09T10:00:37Z,Ford,Fusion,2015,92276.0,10850.0,automatic,unknown,unknown,unknown,unknown,10850.0,12282.93
+7925910253,2026-04-09T08:00:28Z,Mercedes-Benz,S-Class,2014,82595.0,20900.0,automatic,unknown,unknown,unknown,unknown,20900.0,11988.58
+7925910309,2026-04-09T08:00:28Z,Lexus,LS 460,2011,115212.0,13500.0,automatic,unknown,unknown,unknown,unknown,13500.0,12998.99
+7925909019,2026-04-09T07:00:18Z,Chevrolet,Tahoe,2011,178907.0,8500.0,automatic,unknown,unknown,unknown,unknown,8500.0,13399.92
+7925987763,2026-04-09T05:00:40Z,subaru,legacy 2.5i premium,2018,175000.0,7200.0,automatic,unknown,unknown,unknown,unknown,7200.0,12016.2
+7925908910,2026-04-09T07:00:18Z,Chevrolet,Caprice,1988,69541.0,17500.0,automatic,unknown,unknown,unknown,unknown,17500.0,15194.23
+7925910265,2026-04-09T09:00:38Z,Kia,Optima,2015,116669.0,8800.0,automatic,unknown,unknown,unknown,unknown,8800.0,11741.68
+7925910209,2026-04-09T08:00:28Z,Dodge,Grand Caravan,2016,48019.0,12850.0,automatic,unknown,unknown,unknown,unknown,12850.0,12077.58
+7925995313,2026-04-09T07:00:18Z,audi,q5 premium,2016,149000.0,7200.0,automatic,unknown,unknown,unknown,unknown,7200.0,11728.16
+7925906358,2026-04-09T08:00:28Z,Subaru,Outback,2014,106997.0,10998.0,automatic,unknown,unknown,unknown,unknown,10998.0,11419.3
+7926039400,2026-04-09T10:00:37Z,KIA,OPTIMA LX,2014,108500.0,7000.0,automatic,unknown,unknown,unknown,unknown,7000.0,11759.78
+7926041125,2026-04-09T10:00:37Z,Chevy,3500,2007,150000.0,5700.0,automatic,unknown,unknown,unknown,unknown,5700.0,11722.63
+7926046096,2026-04-09T10:00:37Z,Chevrolet,Malibu LT,2006,121230.0,2900.0,automatic,unknown,unknown,unknown,unknown,2900.0,13557.49
+7925909837,2026-04-09T05:00:40Z,INFINITI,Q50,2018,139096.0,14850.0,automatic,unknown,unknown,unknown,unknown,14850.0,12502.46
+7925909825,2026-04-09T10:00:37Z,Audi,Q3,2020,77916.0,17980.0,automatic,unknown,unknown,unknown,unknown,17980.0,12778.24
+7926066162,2026-04-09T04:00:32Z,Dodge,Neon,2002,150000.0,,automatic,unknown,unknown,unknown,unknown,,10327.6
+7926094837,2026-04-09T06:00:30Z,nissan,nv200 sv,2018,133500.0,9800.0,automatic,unknown,unknown,unknown,unknown,9800.0,12246.59
+7925980488,2026-04-09T04:00:32Z,ford,pick up,1966,60000.0,3500.0,automatic,unknown,unknown,unknown,unknown,3500.0,20864.58
+7926035506,2026-04-09T06:00:30Z,HONDA,CIVIC LX,2009,149974.0,6995.0,automatic,unknown,unknown,unknown,unknown,6995.0,11722.63
+7925890250,2026-04-09T08:00:28Z,dodge,durango,2020,69000.0,,automatic,unknown,unknown,unknown,unknown,,12915.41
+7925910184,2026-04-09T07:00:18Z,BMW,X2,2018,79633.0,15500.0,automatic,unknown,unknown,unknown,unknown,15500.0,12633.35
+7926029597,2026-04-09T09:00:38Z,GMC,SIERRA 1500HD 4X4 EXT,2013,119925.0,12400.0,automatic,unknown,unknown,unknown,unknown,12400.0,11854.1
+7926026983,2026-04-09T09:00:38Z,Honda,Civic EX-L,2009,143686.0,7295.0,automatic,unknown,unknown,unknown,unknown,7295.0,11421.78
+7926031130,2026-04-09T10:00:37Z,HONDA,CIVIC LX,2015,156884.0,9295.0,automatic,unknown,unknown,unknown,unknown,9295.0,11728.16
+7926132929,2026-04-09T07:00:18Z,Subaru,Outback,2015,141231.0,10998.0,automatic,unknown,unknown,unknown,unknown,10998.0,11383.57
+7926096214,2026-04-09T05:00:40Z,jaguar,xjs,1992,66660.0,16500.0,automatic,unknown,unknown,unknown,unknown,16500.0,12587.98
+7926028695,2026-04-09T06:00:30Z,TOYOTA,SEQUOIA SR5 4X4,2006,167781.0,6995.0,automatic,unknown,unknown,unknown,unknown,6995.0,11745.34
+7926029250,2026-04-09T09:00:38Z,GMC,SAVANA 2500HD CARGO,2009,167173.0,6495.0,automatic,unknown,unknown,unknown,unknown,6495.0,11836.55
+7926242071,2026-04-09T04:00:32Z,ford,explorer sport,2016,172000.0,7000.0,automatic,unknown,unknown,unknown,unknown,7000.0,11426.85
+7926138873,2026-04-09T10:00:37Z,Toyota,Tacoma,2011,158594.0,,automatic,unknown,unknown,unknown,unknown,,11635.36
+7926222609,2026-04-09T07:00:18Z,chevrolet,silverado 1500,2024,35000.0,43000.0,automatic,unknown,unknown,unknown,unknown,43000.0,12664.32
+7926199758,2026-04-09T07:00:18Z,chevy,traverse lt,2013,155000.0,6000.0,automatic,unknown,unknown,unknown,unknown,6000.0,11303.39
+7926305942,2026-04-09T05:00:40Z,Ford,Mustang GT,2001,6793.0,25000.0,manual,unknown,unknown,unknown,unknown,25000.0,19489.52
+7926253247,2026-04-09T05:00:40Z,toyota,corolla,2007,190000.0,3200.0,manual,unknown,unknown,unknown,unknown,3200.0,13207.89
+7926305629,2026-04-09T08:00:28Z,Mini Cooper,Countryman S ALL4 Hatchback,2019,129000.0,10885.0,automatic,unknown,unknown,unknown,unknown,10885.0,12530.22
+7926295610,2026-04-09T09:00:38Z,volkswagen,tiguan,2016,73500.0,7500.0,automatic,unknown,unknown,unknown,unknown,7500.0,12166.83
+7926302204,2026-04-09T10:00:37Z,Dodge,Neon,2002,150000.0,3288.0,automatic,unknown,unknown,unknown,unknown,3288.0,10327.6
+7926317186,2026-04-09T08:00:28Z,Ford,F-150,2016,178733.0,,automatic,unknown,unknown,unknown,unknown,,12706.37
+7926388127,2026-04-09T10:00:37Z,toyota,highlander,2019,99548.0,23900.0,automatic,unknown,unknown,unknown,unknown,23900.0,12614.1
+7926450869,2026-04-09T05:00:40Z,nissan,sentra,2012,120000.0,5000.0,automatic,unknown,unknown,unknown,unknown,5000.0,11471.88
+7926533458,2026-04-09T05:00:40Z,acura,mdx sport,2012,166000.0,7600.0,automatic,unknown,unknown,unknown,unknown,7600.0,11457.41
+7926386562,2026-04-09T07:00:18Z,Subaru,Forester 2.5i Limited,2015,144211.0,8499.0,automatic,unknown,unknown,unknown,unknown,8499.0,11453.56
+7926514816,2026-04-09T07:00:18Z,Dodge,Neon,2002,150000.0,,automatic,unknown,unknown,unknown,unknown,,10327.6
+7926538707,2026-04-09T09:00:38Z,HONDA,CR-V LX,2011,139000.0,7300.0,automatic,unknown,unknown,unknown,unknown,7300.0,11730.25
+7926537743,2026-04-09T10:00:37Z,HONDA,PILOT EX-L,2013,166000.0,7900.0,automatic,unknown,unknown,unknown,unknown,7900.0,11714.04
+7926472431,2026-04-09T10:00:37Z,jeep,grand cherokee,2019,90000.0,,automatic,unknown,unknown,unknown,unknown,,12614.1
