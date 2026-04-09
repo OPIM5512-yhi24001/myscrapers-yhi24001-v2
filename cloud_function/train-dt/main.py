@@ -258,12 +258,12 @@ def run_once(dry_run=False, max_depth=12, min_samples_leaf=10):
             train_llm   = train_llm[train_llm["price_num"].notna()]
 
             if len(train_llm) >= 40:
-                cat_cols_llm = ["make", "model", "transmission", "color", "state"]
+                cat_cols_llm = ["make", "model", "transmission", "color", "state", "city", "zip_code"]
                 num_cols_llm = ["year_num", "mileage_num", "vehicle_age"]
                 feats_llm    = cat_cols_llm + num_cols_llm
 
                 # Fill missing new columns
-                for c in ["transmission", "color", "state"]:
+                for c in ["transmission", "color", "state", "city"]:
                     if c not in train_llm.columns:
                         train_llm[c] = "unknown"
                     if c not in holdout_llm.columns:
@@ -309,7 +309,7 @@ def run_once(dry_run=False, max_depth=12, min_samples_leaf=10):
                     y_hat_llm    = pipe_llm.predict(holdout_llm[feats_llm])
                     cols_llm     = ["post_id", "scraped_at", "make", "model",
                                     "year", "mileage", "price",
-                                    "transmission", "color", "state"]
+                                    "transmission", "color", "state", "zip_code", "city"]
                     cols_llm     = [c for c in cols_llm if c in holdout_llm.columns]
                     preds_llm_df = holdout_llm[cols_llm].copy()
                     preds_llm_df["actual_price"] = holdout_llm["price_num"]
