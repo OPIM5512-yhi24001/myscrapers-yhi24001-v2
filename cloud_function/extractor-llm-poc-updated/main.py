@@ -1,6 +1,14 @@
-# main.py - UPDATED LLM EXTRACTOR
-# Purpose: Extract EXTENDED fields including color, city, state, zip_code
-# Location: cloud_function/extractor-llm-updated/main.py
+# main.py
+# Purpose: PoC Updated LLM extractor that reads your existing per-listing JSONL records,
+# fetches the original TXT, asks an LLM (Vertex AI) to extract fields, and writes
+# a sibling "<post_id>_llm_updated.jsonl" to the NEW 'jsonl_llm_updated/' sub-directory.
+#
+# FINAL FIXES INCLUDED:
+# 1. Schema updated to use "type": "string" + "nullable": True.
+# 2. system_instruction removed from GenerationConfig and merged into prompt.
+# 3. LLM_MODEL set to 'gemini-2.5-flash' (Fixes 404/NotFound error).
+# 4. "additionalProperties": False removed from schema (Fixes internal ParseError).
+# 5. Non-breaking spaces (U+00A0) replaced with standard spaces (U+0020). <--- FIX FOR THIS ERROR
 
 import os
 import re
@@ -16,7 +24,7 @@ from google.cloud import storage
 
 # ---- REQUIRED VERTEX AI IMPORTS ----
 import vertexai
-from vertexai.generative_models import GenerativeModel, GenerationConfig
+from vertexai.generative_models import GenerativeModel, GenerationConfig, Content
 from google.api_core.exceptions import ResourceExhausted, InternalServerError, Aborted, DeadlineExceeded
 
 # -------------------- ENV --------------------
@@ -29,7 +37,7 @@ LLM_MODEL            = os.getenv("LLM_MODEL", "gemini-2.5-flash")
 OVERWRITE_DEFAULT    = os.getenv("OVERWRITE", "false").lower() == "true"
 MAX_FILES_DEFAULT    = int(os.getenv("MAX_FILES", "0") or 0)
 
-# GCS READ RETRY
+# GCS READ RETRY - Use default transient error logic
 READ_RETRY = gax_retry.Retry(
     predicate=gax_retry.if_transient_error,
     initial=1.0, maximum=10.0, multiplier=2.0, deadline=120.0
@@ -56,12 +64,13 @@ RUN_ID_PLAIN_RE = re.compile(r"^\d{14}$")
 
 # -------------------- HELPERS --------------------
 def _get_vertex_model() -> GenerativeModel:
-    """Initializes and returns the cached Vertex AI model object."""
+    """Initializes and returns the cached Vertex AI model object (thread-safe for CF)."""
     global _CACHED_MODEL_OBJ
     if _CACHED_MODEL_OBJ is None:
         if not PROJECT_ID:
             raise RuntimeError("PROJECT_ID environment variable is missing.")
         
+        # Initialize client once per container lifecycle
         vertexai.init(project=PROJECT_ID, location=REGION)
         _CACHED_MODEL_OBJ = GenerativeModel(LLM_MODEL)
         logging.info(f"Initialized Vertex AI model: {LLM_MODEL} in {REGION}")
@@ -69,7 +78,9 @@ def _get_vertex_model() -> GenerativeModel:
 
 
 def _list_structured_run_ids(bucket: str, structured_prefix: str) -> list[str]:
-    """List 'structured/run_id=*/' directories and return normalized run_ids."""
+    """
+    List 'structured/run_id=*/' directories and return normalized run_ids.
+    """
     it = storage_client.list_blobs(bucket, prefix=f"{structured_prefix}/", delimiter="/")
     for _ in it:
         pass
@@ -85,7 +96,9 @@ def _list_structured_run_ids(bucket: str, structured_prefix: str) -> list[str]:
 
 
 def _normalize_run_id_iso(run_id: str) -> str:
-    """Normalize run_id to ISO8601 Z string for provenance."""
+    """
+    Normalize run_id to ISO8601 Z string for provenance.
+    """
     try:
         if RUN_ID_ISO_RE.match(run_id):
             dt = datetime.strptime(run_id, "%Y%m%dT%H%M%SZ").replace(tzinfo=timezone.utc)
@@ -99,7 +112,10 @@ def _normalize_run_id_iso(run_id: str) -> str:
 
 
 def _list_per_listing_jsonl_for_run(bucket: str, run_id: str) -> list[str]:
-    """Return *input* per-listing JSONL object names for a given run_id."""
+    """
+    Return *input* per-listing JSONL object names for a given run_id
+    (assumes inputs are in 'jsonl/').
+    """
     prefix = f"{STRUCTURED_PREFIX}/run_id={run_id}/jsonl/"
     bucket_obj = storage_client.bucket(bucket)
     names = []
@@ -137,59 +153,50 @@ def _safe_int(x):
         return None
 
 
-# -------------------- UPDATED VERTEX AI CALL --------------------
+# -------------------- VERTEX AI CALL --------------------
 def _vertex_extract_fields(raw_text: str) -> dict:
     """
-    Ask Gemini to return JSON with EXTENDED fields:
-    - Original: price, year, make, model, transmission, mileage
-    - NEW: color, city, state, zip_code
+    Ask Gemini to return JSON with exactly: price, year, make, model, transmission, mileage.
     """
     model = _get_vertex_model()
 
-    # UPDATED JSON schema with 4 NEW fields
+    # Strict JSON schema - FIX: Removed "additionalProperties": False
     schema = {
         "type": "object",
         "properties": {
-            # Original fields
             "price": {"type": "integer", "nullable": True},
             "year": {"type": "integer", "nullable": True},
             "make": {"type": "string", "nullable": True},
             "model": {"type": "string", "nullable": True},
+             "mileage": {"type": "integer", "nullable": True},
             "transmission": {"type": "string", "nullable": True},
-            "mileage": {"type": "integer", "nullable": True},
-            
-            # NEW FIELDS for midterm project
+           
+
+             # NEW FIELDS for midterm project
             "color": {"type": "string", "nullable": True},
             "city": {"type": "string", "nullable": True},
             "state": {"type": "string", "nullable": True},
             "zip_code": {"type": "string", "nullable": True},
+            
         },
-        "required": ["price", "year", "make", "model", "transmission", "mileage", 
-                     "color", "city", "state", "zip_code"]
+        "required": ["price", "year", "make", "model", "mileage", "transmission", "color", "city", "state", "zip_code"]
     }
 
-    # updated system instruction
+    # System instruction (will be prepended to the prompt)
     sys_instr = (
-        "Extract the following fields from this Craigslist car listing. "
+        "Extract ONLY the following fields from the input text. "
         "Return a strict JSON object that conforms to the provided schema. "
-        "If a value is not present or cannot be determined, use null. "
-        "\n\nRULES:\n"
-        "- price: integer in USD (no $ or commas)\n"
-        "- year: integer (4 digits)\n"
-        "- make: car manufacturer (e.g., 'Toyota', 'Honda', 'Ford')\n"
-        "- model: specific car model (e.g., 'Camry', 'Civic', 'F-150')\n"
-        "- mileage: integer in miles (no commas)\n"
-        "- transmission: 'manual' or 'automatic' (lowercase)\n"
-        "- color: exterior color of the vehicle (e.g., 'black', 'silver', 'red')\n"
-        "- city: city name from listing location (e.g., 'Hartford', 'New Haven')\n"
-        "- state: two-letter state code (e.g., 'CT', 'NY', 'MA')\n"
-        "- zip_code: 5-digit zip code as a string (e.g., '06511')\n"
-        "\nDo NOT infer values not explicitly present. Do NOT add extra keys."
+        "If a value is not present, use null. "
+        "Rules: integers for price/year/mileage; price in USD; mileage in miles; "
+        "the transmission can be manual or automatic, or if not listed, write null."
+        "do not infer values not explicitly present; do not add extra keys."
     )
 
+    # FIX: Combine instruction and text into one prompt string (SDK compatibility)
     prompt = f"{sys_instr}\n\nTEXT:\n{raw_text}"
 
     gen_cfg = GenerationConfig(
+        # FIX: system_instruction removed to fix TypeError 
         temperature=0.0,
         top_p=1.0,
         top_k=40,
@@ -203,9 +210,11 @@ def _vertex_extract_fields(raw_text: str) -> dict:
     resp = None
     for attempt in range(max_attempts):
         try:
+            # Pass the single string prompt
             resp = model.generate_content(prompt, generation_config=gen_cfg)
             break
         except Exception as e:
+            # Includes the 404/NotFound error from the previous run
             if not _if_llm_retryable(e) or attempt == max_attempts - 1:
                 logging.error(f"Fatal/non-retryable LLM error or max retries reached: {e}")
                 raise
@@ -219,36 +228,26 @@ def _vertex_extract_fields(raw_text: str) -> dict:
 
     parsed = json.loads(resp.text)
 
-    # Normalize numeric fields
+    # Normalize fields post-extraction
     parsed["price"] = _safe_int(parsed.get("price"))
     parsed["year"] = _safe_int(parsed.get("year"))
     parsed["mileage"] = _safe_int(parsed.get("mileage"))
     
     def _norm_str(s):
-        if s is None: 
-            return None
+        if s is None: return None
         s = str(s).strip()
         return s if s else None
 
-    # Normalize string fields
     parsed["make"] = _norm_str(parsed.get("make"))
     parsed["model"] = _norm_str(parsed.get("model"))
-    parsed["transmission"] = _norm_str(parsed.get("transmission"))
-    
-    # Normalize NEW fields
-    parsed["color"] = _norm_str(parsed.get("color"))
-    parsed["city"] = _norm_str(parsed.get("city"))
-    parsed["state"] = _norm_str(parsed.get("state"))
-    parsed["zip_code"] = _norm_str(parsed.get("zip_code"))
 
     return parsed
 
 
 # -------------------- HTTP ENTRY --------------------
-def llm_extract_updated_http(request: Request):
+def llm_extract_http(request: Request):
     """
-    updated LLM Extractor with 10 fields (6 original + 4 new).
-    Reads latest (or requested) run's per-listing JSONL inputs and writes updated LLM outputs.
+    Reads latest (or requested) run's per-listing JSONL inputs and writes LLM outputs.
     """
     logging.getLogger().setLevel(logging.INFO)
 
@@ -257,7 +256,7 @@ def llm_extract_updated_http(request: Request):
     if not PROJECT_ID:
         return jsonify({"ok": False, "error": "missing PROJECT_ID env"}), 500
     if LLM_PROVIDER != "vertex":
-        return jsonify({"ok": False, "error": "updated extractor supports LLM_PROVIDER='vertex' only"}), 400
+        return jsonify({"ok": False, "error": "PoC supports LLM_PROVIDER='vertex' only"}), 400
 
     # Body overrides
     try:
@@ -284,7 +283,7 @@ def llm_extract_updated_http(request: Request):
     if max_files > 0:
         inputs = inputs[:max_files]
 
-    logging.info(f"Starting updated LLM extraction for run_id={run_id} ({len(inputs)} files to process)")
+    logging.info(f"Starting LLM extraction for run_id={run_id} ({len(inputs)} files to process)")
 
     processed = written = skipped = errors = 0
 
@@ -305,9 +304,9 @@ def llm_extract_updated_http(request: Request):
             if not source_txt_key:
                 raise ValueError("missing source_txt in input record")
 
-            # Output path: uses 'jsonl_llm_updated/' folder
-            out_prefix = in_key.rsplit("/", 2)[0] + "/jsonl_llm_updated"
-            out_key = out_prefix + f"/{post_id}_llm_updated.jsonl"
+            # Output path: uses 'jsonl_llm/' folder
+            out_prefix = in_key.rsplit("/", 2)[0] + "/jsonl_llm"
+            out_key = out_prefix + f"/{post_id}_llm.jsonl"
 
             if not overwrite and _blob_exists(out_key):
                 skipped += 1
@@ -318,28 +317,18 @@ def llm_extract_updated_http(request: Request):
 
             parsed = _vertex_extract_fields(raw_listing)
 
-            # Compose final record with ALL 10 fields
+            # Compose final record
             out_record = {
                 "post_id": post_id,
                 "run_id": base_rec.get("run_id", run_id),
                 "scraped_at": base_rec.get("scraped_at", structured_iso),
                 "source_txt": source_txt_key,
-                
-                # Original 6 fields
                 "price": parsed.get("price"),
                 "year": parsed.get("year"),
                 "make": parsed.get("make"),
                 "model": parsed.get("model"),
                 "mileage": parsed.get("mileage"),
                 "transmission": parsed.get("transmission"),
-                
-                # Added 4 fields for project
-                "color": parsed.get("color"),
-                "city": parsed.get("city"),
-                "state": parsed.get("state"),
-                "zip_code": parsed.get("zip_code"),
-                
-                # Metadata
                 "llm_provider": "vertex",
                 "llm_model": LLM_MODEL,
                 "llm_ts": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
@@ -354,14 +343,12 @@ def llm_extract_updated_http(request: Request):
 
     result = {
         "ok": True,
-        "version": "extractor-llm-updated-v1",
+        "version": "extractor-llm-poc",
         "run_id": run_id,
         "processed": processed,
         "written": written,
         "skipped": skipped,
         "errors": errors,
-        "fields_extracted": 10,
-        "new_fields": ["color", "city", "state", "zip_code"]
     }
     logging.info(json.dumps(result))
     return jsonify(result), 200
