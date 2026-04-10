@@ -223,7 +223,7 @@ def _vertex_extract_fields(raw_text: str) -> dict:
                 logging.error(f"Fatal/non-retryable LLM error or max retries reached: {e}")
                 raise
             
-            sleep_time = LLM_RETRY._calculate_sleep(attempt)
+            sleep_time = min(5.0 * (2 ** attempt), 30.0)  # simple backoff
             logging.warning(f"Transient LLM error on attempt {attempt+1}/{max_attempts}. Retrying in {sleep_time:.2f}s...")
             time.sleep(sleep_time)
 
@@ -245,6 +245,12 @@ def _vertex_extract_fields(raw_text: str) -> dict:
     parsed["make"] = _norm_str(parsed.get("make"))
     parsed["model"] = _norm_str(parsed.get("model"))
 
+    parsed["transmission"] = _norm_str(parsed.get("transmission"))
+    parsed["color"]        = _norm_str(parsed.get("color"))
+    parsed["city"]         = _norm_str(parsed.get("city"))
+    parsed["state"]        = _norm_str(parsed.get("state"))
+    parsed["zip_code"]     = _norm_str(parsed.get("zip_code"))
+    
     return parsed
 
 
@@ -350,7 +356,7 @@ def llm_extract_http(request: Request):
 
         except Exception as e:
             errors += 1
-            logging.error(f"LLM extraction failed for {in_key}: {e}\n{traceback.format_exc()}")
+            logging.error(...) 
 
     result = {
         "ok": True,
