@@ -268,8 +268,9 @@ def run_once(dry_run=False, max_depth=12, min_samples_leaf=10):
                         train_llm[c] = "unknown"
                     if c not in holdout_llm.columns:
                         holdout_llm[c] = "unknown"
-                    train_llm[c]   = train_llm[c].fillna("unknown")
-                    holdout_llm[c] = holdout_llm[c].fillna("unknown")
+                # Force string type BEFORE fillna - this is the fix
+                    train_llm[c]   = train_llm[c].astype(str).replace("nan", "unknown").fillna("unknown")
+                    holdout_llm[c] = holdout_llm[c].astype(str).replace("nan", "unknown").fillna("unknown")
 
                 pre_llm = ColumnTransformer(transformers=[
                     ("num", SimpleImputer(strategy="median"), num_cols_llm),
