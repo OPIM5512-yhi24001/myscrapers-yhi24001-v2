@@ -22,7 +22,8 @@ env:
   BUCKET_NAME: ${{ vars.BUCKET_NAME }}
   TIMEOUT_SECONDS: "900"
   MEMORY: "2Gi"
-  DATA_KEY: "structured/datasets/listings_master_llm_updated.csv"
+  DATA_KEY: "structured/datasets/listings_master.csv" 
+  DATA_KEY_LLM: "structured/datasets/listings_master_llm_updated.csv"  # Added this
   OUTPUT_PREFIX: "structured/preds"
   # Align with your other workflows
   RUNTIME_SA: ${{ vars.RUNTIME_SA }}                 # function runtime SA (email)
