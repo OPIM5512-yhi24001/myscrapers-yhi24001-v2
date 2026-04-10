@@ -28,7 +28,7 @@ RUN_ID_PLAIN_RE = re.compile(r"^\d{14}$")        # 20251026170002
 CSV_COLUMNS = [
     "post_id", "run_id", "scraped_at",
     "price", "year", "make", "model", "mileage", "transmission",
-    "color", "city", "state", "zip_code", #new added features
+    "color", "city", "state", "zip_code", # new added features
     "source_txt"
 ]
 
@@ -48,7 +48,7 @@ def _list_run_ids(bucket: str, structured_prefix: str) -> list[str]:
 def _jsonl_records_for_run(bucket: str, structured_prefix: str, run_id: str):
     """Yield dict records from .jsonl under .../run_id=<run_id>/jsonl/ (one JSON per file)."""
     b = storage_client.bucket(bucket)
-    prefix = f"{structured_prefix}/run_id={run_id}/jsonl_llm/"
+    prefix = f"{structured_prefix}/run_id={run_id}/jsonl_llm_updated/"
     for blob in b.list_blobs(prefix=prefix):
         if not blob.name.endswith(".jsonl"):
             continue
@@ -117,7 +117,7 @@ def materialize_http(request: Request):
                     latest_by_post[pid] = rec
 
         base = f"{STRUCTURED_PREFIX}/datasets"
-        final_key = f"{base}/listings_master_llm.csv"
+        final_key = f"{base}/listings_master_llm_updated.csv"
         rows = _write_csv(latest_by_post.values(), final_key)
 
         return jsonify({
