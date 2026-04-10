@@ -156,7 +156,7 @@ def _safe_int(x):
 # -------------------- VERTEX AI CALL --------------------
 def _vertex_extract_fields(raw_text: str) -> dict:
     """
-    Ask Gemini to return JSON with exactly: price, year, make, model, transmission, mileage.
+    Ask Gemini to return JSON with exactly: price, year, make, model, mileage, transmission, color, city, state, zip_code.
     """
     model = _get_vertex_model()
 
@@ -172,7 +172,7 @@ def _vertex_extract_fields(raw_text: str) -> dict:
             "transmission": {"type": "string", "nullable": True},
            
 
-             # NEW FIELDS for midterm project
+             # Added features for midterm project
             "color": {"type": "string", "nullable": True},
             "city": {"type": "string", "nullable": True},
             "state": {"type": "string", "nullable": True},
@@ -189,6 +189,10 @@ def _vertex_extract_fields(raw_text: str) -> dict:
         "If a value is not present, use null. "
         "Rules: integers for price/year/mileage; price in USD; mileage in miles; "
         "the transmission can be manual or automatic, or if not listed, write null."
+        "- color: exterior color of the vehicle (e.g., 'black', 'silver', 'red')\n"
+        "- city: city name from listing location (e.g., 'Hartford', 'New Haven')\n"
+        "- state: two-letter state code (e.g., 'CT', 'NY', 'MA')\n"
+        "- zip_code: 5-digit zip code as a string (e.g., '06511')\n"
         "do not infer values not explicitly present; do not add extra keys."
     )
 
@@ -329,6 +333,13 @@ def llm_extract_http(request: Request):
                 "model": parsed.get("model"),
                 "mileage": parsed.get("mileage"),
                 "transmission": parsed.get("transmission"),
+
+                # NEW 4 fields
+                "color": parsed.get("color"),
+                "city": parsed.get("city"),
+                "state": parsed.get("state"),
+                "zip_code": parsed.get("zip_code"),
+                
                 "llm_provider": "vertex",
                 "llm_model": LLM_MODEL,
                 "llm_ts": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
