@@ -24,7 +24,7 @@ optuna.logging.set_verbosity(optuna.logging.WARNING)
 PROJECT_ID     = os.getenv("PROJECT_ID", "")
 GCS_BUCKET     = os.getenv("GCS_BUCKET", "")
 DATA_KEY       = os.getenv("DATA_KEY", "structured/datasets/listings_master.csv")
-DATA_KEY_LLM   = os.getenv("DATA_KEY_LLM", "structured/datasets/listings_master_llm.csv")
+DATA_KEY_LLM   = os.getenv("DATA_KEY_LLM", "structured/datasets/listings_master_llm_updated.csv")
 OUTPUT_PREFIX  = os.getenv("OUTPUT_PREFIX", "structured/preds")
 TIMEZONE       = os.getenv("TIMEZONE", "America/New_York")
 LOG_LEVEL      = os.getenv("LOG_LEVEL", "INFO")
@@ -241,7 +241,7 @@ def run_once(dry_run=False, max_depth=12, min_samples_leaf=10):
         _write_csv_to_gcs(client, GCS_BUCKET, out_key, preds_df)
         logging.info("Wrote preds.csv → gs://%s/%s", GCS_BUCKET, out_key)
 
-    # ── LLM MODEL with OPTUNA (preds_llm.csv) ─────────────────────────────
+    # ── LLM MODEL with OPTUNA (preds_llm_updated.csv) ─────────────────────────────
     mae_llm      = None
     preds_llm_df = pd.DataFrame()
     best_params  = {}
