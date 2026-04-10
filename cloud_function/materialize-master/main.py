@@ -105,6 +105,11 @@ def materialize_http(request: Request):
         if not run_ids:
             return jsonify({"ok": False, "error": f"no runs found under {STRUCTURED_PREFIX}/"}), 200
 
+        body = request.get_json(silent=True) or {}
+        max_runs = int(body.get("max_runs", 0))
+        if max_runs > 0:
+            run_ids = run_ids[-max_runs:]
+
         latest_by_post: Dict[str, Dict] = {}
         for rid in run_ids:
             for rec in _jsonl_records_for_run(BUCKET_NAME, STRUCTURED_PREFIX, rid):
