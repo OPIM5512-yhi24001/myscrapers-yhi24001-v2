@@ -326,6 +326,7 @@ def llm_extract_http(request: Request):
             raw_listing = _download_text(source_txt_key)
 
             parsed = _vertex_extract_fields(raw_listing)
+            logging.info(f"LLM parsed for {post_id}: {json.dumps(parsed)}")
 
             # Compose final record
             out_record = {
