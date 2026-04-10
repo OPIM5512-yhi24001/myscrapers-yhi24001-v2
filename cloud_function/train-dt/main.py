@@ -256,6 +256,7 @@ def run_once(dry_run=False, max_depth=12, min_samples_leaf=10):
             train_llm   = df_llm[df_llm["date_local"] <  today_llm].copy()
             holdout_llm = df_llm[df_llm["date_local"] == today_llm].copy()
             train_llm   = train_llm[train_llm["price_num"].notna()]
+            logging.info(f"LLM split: today={today_llm}, train={len(train_llm)}, holdout={len(holdout_llm)}")
 
             if len(train_llm) >= 40:
                 cat_cols_llm = ["make", "model", "transmission", "color", "state", "city", "zip_code"]
