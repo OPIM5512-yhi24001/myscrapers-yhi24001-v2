@@ -308,9 +308,9 @@ def llm_extract_http(request: Request):
             if not source_txt_key:
                 raise ValueError("missing source_txt in input record")
 
-            # Output path: uses 'jsonl_llm/' folder
-            out_prefix = in_key.rsplit("/", 2)[0] + "/jsonl_llm"
-            out_key = out_prefix + f"/{post_id}_llm.jsonl"
+            # Output path: uses 'jsonl_llm_updated/' folder
+            out_prefix = in_key.rsplit("/", 2)[0] + "/jsonl_llm_updated"
+            out_key = out_prefix + f"/{post_id}_llm_updated.jsonl"
 
             if not overwrite and _blob_exists(out_key):
                 skipped += 1
@@ -354,7 +354,7 @@ def llm_extract_http(request: Request):
 
     result = {
         "ok": True,
-        "version": "extractor-llm-poc",
+        "version": "extractor-llm-poc-updated",
         "run_id": run_id,
         "processed": processed,
         "written": written,
