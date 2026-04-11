@@ -1,0 +1,90 @@
+post_id,scraped_at,make,model,year,mileage,price,transmission,color,state,zip_code,city,actual_price,pred_price
+7923277819,2026-04-11T04:00:06Z,Acura,RDX SH-AWD w/tech,2008,131799.0,7995.0,automatic,red,CT,6516.0,West Haven,7995.0,10656.53
+7923722098,2026-04-11T04:00:06Z,Chrysler,Town & Country,2015,51345.0,28900.0,automatic,white,GA,unknown,Dallas,28900.0,15594.59
+7923844048,2026-04-11T05:00:08Z,Dodge,Grand Caravan SXT,2016,180000.0,5000.0,automatic,black,CT,unknown,Shelton,5000.0,9460.56
+7923855738,2026-04-11T04:00:06Z,Acura,TL,2008,144000.0,3800.0,unknown,grey,CT,unknown,Bridgeport,3800.0,10836.87
+7924376322,2026-04-11T04:00:06Z,Dodge,Neon,2002,150000.0,3288.0,automatic,unknown,CT,unknown,Wallingford,3288.0,7716.93
+7923573368,2026-04-11T05:00:08Z,nissan,altima,2013,103000.0,9500.0,automatic,white,CT,unknown,Stratford,9500.0,9882.14
+7923838194,2026-04-11T05:00:08Z,Subaru,Outback,2018,136170.0,13998.0,automatic,blue,CT,6026.0,East Granby,13998.0,11676.61
+7924386182,2026-04-11T04:00:06Z,TOYOTA,CAMRY SE,2012,93250.0,13800.0,automatic,red,CT,unknown,Waterbury,13800.0,9725.67
+7924444719,2026-04-11T04:00:06Z,Subaru,Outback,2012,130671.0,8998.0,automatic,red,CT,6026.0,East Granby,8998.0,10653.1
+7923269547,2026-04-11T04:00:06Z,Volkswagen,Jetta Sedan,2015,141800.0,6800.0,automatic,red,CT,6902.0,Stamford,6800.0,10721.62
+7923269589,2026-04-11T05:00:08Z,Cadillac,ATS Sedan,2015,80600.0,13800.0,automatic,Tan Silver Coast Metallic on Light Neutral w/Medi Leather,CT,6902.0,Stamford,13800.0,11449.84
+7923863990,2026-04-11T05:00:08Z,Fiat,500,2012,37851.0,7999.0,manual,blue,NH,unknown,Manchester,7999.0,15366.52
+7923914038,2026-04-11T05:00:08Z,Ford,F-250,1997,131000.0,5500.0,automatic,blue,CT,unknown,New Haven,5500.0,11729.81
+7923948525,2026-04-11T05:00:08Z,Ford,Edge,2018,137100.0,10800.0,automatic,Gray Magnetic Metallic,CT,6902.0,Stamford,10800.0,13192.02
+7924159050,2026-04-11T05:00:08Z,Ford,Mustang,1967,,5000.0,manual,red,CT,unknown,Naugatuck,5000.0,16045.54
+7923549869,2026-04-11T05:00:08Z,Acura,3.5RL,2001,121327.0,4300.0,automatic,white,CT,unknown,Stratford,4300.0,9801.9
+7923687600,2026-04-11T04:00:06Z,mercedes-benz,gl450 4matic,2015,124948.0,10950.0,automatic,black,CT,unknown,Meriden,10950.0,10330.57
+7923484982,2026-04-11T04:00:06Z,toyota,camry le,2009,72000.0,9000.0,automatic,grey,CT,unknown,Wallingford,9000.0,9863.8
+7924043271,2026-04-11T04:00:06Z,Chevrolet,Avalanche 1500 LTZ 4x4,2005,215000.0,5800.0,automatic,unknown,CT,unknown,Stratford,5800.0,9941.34
+7924070470,2026-04-11T05:00:08Z,Lexus,RX 350L,2019,149541.0,20900.0,automatic,white,CT,6450.0,Meriden,20900.0,13617.75
+7923278051,2026-04-11T04:00:06Z,Nissan,Altima 2.5 SV,2014,117455.0,6488.0,automatic,white,CT,6516.0,West Haven,6488.0,10933.93
+7923845755,2026-04-11T05:00:08Z,VW,JETTA SE,2014,173000.0,4200.0,automatic,grey,CT,unknown,Shelton,4200.0,9462.13
+7924810376,2026-04-11T05:00:08Z,Mercedes-Benz,Sprinter 3500,2016,200489.0,11800.0,automatic,white,CT,unknown,Hamden,11800.0,10128.82
+7923269508,2026-04-11T05:00:08Z,Chevrolet,Equinox,2018,135100.0,12800.0,automatic,black,CT,6902.0,Stamford,12800.0,12866.75
+7924666742,2026-04-11T05:00:08Z,Chevrolet,Silverado 1500,2015,126474.0,15900.0,automatic,Slate Grey Metallic,CT,6606.0,Bridgeport,15900.0,14187.87
+7924562729,2026-04-11T04:00:06Z,subaru,outback,2011,150000.0,6000.0,automatic,red,CT,unknown,Derby,6000.0,9378.91
+7924224802,2026-04-11T04:00:06Z,chevy,cruze,2013,85000.0,5495.0,automatic,tan,CT,unknown,Milford,5495.0,9720.69
+7924073386,2026-04-11T05:00:08Z,Cadillac,ATS-4 AWD Sport Sedan,2014,130000.0,6485.0,automatic,red,CT,unknown,Branford,6485.0,9369.53
+7923854316,2026-04-11T04:00:06Z,Chevy,Silverado,2004,188000.0,3500.0,automatic,unknown,NJ,unknown,Piscataway,3500.0,14331.86
+7924967328,2026-04-11T04:00:06Z,BMW,X5,2018,100000.0,18000.0,automatic,unknown,CT,unknown,Derby,18000.0,11383.88
+7924922065,2026-04-11T05:00:08Z,Ford,F150,1987,79000.0,7500.0,manual,red,CT,unknown,North Branford,7500.0,11584.75
+7925003013,2026-04-11T05:00:08Z,Jaguar,MK V Drophead coupe,1950,51000.0,85000.0,manual,red,CT,unknown,Shelton,85000.0,15342.55
+7925112720,2026-04-11T05:00:08Z,BMW,Z3 Roadster,2001,79700.0,14000.0,automatic,silver,CT,unknown,Deep River,14000.0,10255.85
+7925186421,2026-04-11T04:00:06Z,toyota,4Runner Limited Trail TRD Off-Road 4x4 SUV,2016,181790.0,18900.0,automatic,white,CT,6450.0,Meriden,18900.0,11260.35
+7925336798,2026-04-11T04:00:06Z,Subaru,Forester,2015,132799.0,10998.0,automatic,silver,CT,6026.0,East Granby,10998.0,10686.62
+7925336756,2026-04-11T04:00:06Z,Subaru,Legacy,2017,124781.0,10998.0,automatic,white,CT,6026.0,East Granby,10998.0,12033.36
+7925348793,2026-04-11T04:00:06Z,Mercedes-Benz,GLK350 4-matic Luxury SUV,2015,130000.0,9885.0,automatic,Pearl White Metallic,CT,unknown,Branford,9885.0,9656.28
+7925354008,2026-04-11T05:00:08Z,hyundai,elantra,2013,130000.0,4700.0,automatic,red,CT,unknown,Branford,4700.0,9313.7
+7925411755,2026-04-11T05:00:08Z,volkswagen,passat,2008,158000.0,2000.0,manual,unknown,CT,unknown,New Haven,2000.0,10958.28
+7925133149,2026-04-11T05:00:08Z,ford,ELITE,1976,40000.0,4000.0,automatic,white,CT,unknown,Derby,4000.0,14219.12
+7925591785,2026-04-11T04:00:06Z,Porsche,Macan,2017,78600.0,17300.0,automatic,black,CT,unknown,Shelton,17300.0,11515.18
+7925619053,2026-04-11T04:00:06Z,Ford,Fiesta S,2016,88133.0,5900.0,automatic,white,CT,unknown,Branford,5900.0,10895.08
+7925568443,2026-04-11T05:00:08Z,Subaru,Outback,2016,136978.0,11998.0,automatic,red,CT,6026.0,East Granby,11998.0,10792.15
+7925617373,2026-04-11T05:00:08Z,Kia,Soul Base 4D Wagon,2014,123296.0,5900.0,automatic,white,CT,unknown,Branford,5900.0,9665.74
+7925617922,2026-04-11T05:00:08Z,Jeep,Cherokee Latitude,2015,81802.0,9900.0,automatic,blue,CT,unknown,Branford,9900.0,9715.64
+7925602918,2026-04-11T04:00:06Z,Tesla,Model Y,2021,61000.0,5000.0,automatic,white,CT,unknown,North Haven,5000.0,11431.51
+7925662162,2026-04-11T04:00:06Z,toyota,highlander,2003,258000.0,1600.0,automatic,custom,CT,unknown,East Haven,1600.0,9796.53
+7925619188,2026-04-11T04:00:06Z,Subaru,Crosstrek,2018,173000.0,9900.0,automatic,red,CT,unknown,Branford,9900.0,10544.92
+7925618185,2026-04-11T04:00:06Z,Infiniti,EX37 Journey,2013,89281.0,9900.0,automatic,grey,CT,unknown,Branford,9900.0,9534.6
+7925618752,2026-04-11T05:00:08Z,Hyundai,Sonata,2014,118290.0,7900.0,automatic,white,CT,unknown,Branford,7900.0,9661.56
+7925751059,2026-04-11T05:00:08Z,Audi,A4 2.0T Quattro,2009,114115.0,6000.0,automatic,silver,CT,unknown,Meriden,6000.0,9996.73
+7925776266,2026-04-11T05:00:08Z,Toyota,Camry,2018,33000.0,2000.0,automatic,white,CT,unknown,North Haven,2000.0,11062.62
+7925757414,2026-04-11T05:00:08Z,mitsubishi,fuso,2017,33587.0,34500.0,automatic,white,CT,unknown,Wallingford,34500.0,11467.28
+7925776290,2026-04-11T05:00:08Z,Tesla,Model Y,2021,61000.0,5000.0,automatic,white,CT,unknown,North Haven,5000.0,11431.51
+7925870629,2026-04-11T05:00:08Z,Bedrock,Flatbed truck bodies,2022,1000.0,3500.0,unknown,black,CT,unknown,Brookfield,3500.0,21177.29
+7925890251,2026-04-11T05:00:08Z,jeep,grand cherokee,2019,90000.0,,automatic,unknown,NJ,unknown,South Orange,,16744.66
+7925909872,2026-04-11T04:00:06Z,Ford,Fusion,2020,35125.0,14850.0,automatic,blue,CT,6606.0,Bridgeport,14850.0,15606.53
+7925909885,2026-04-11T05:00:08Z,Mercedes-Benz,GLK-Class,2015,123897.0,8900.0,automatic,red,CT,6606.0,Bridgeport,8900.0,13180.18
+7926028695,2026-04-11T04:00:06Z,TOYOTA,SEQUOIA SR5,2006,167781.0,6995.0,automatic,grey,CT,unknown,North Branford,6995.0,9720.28
+7926165731,2026-04-11T05:00:08Z,Lexus,LC 500,2018,18290.0,53820.0,automatic,emerald-red,CT,unknown,West Haven,53820.0,15691.31
+7926305942,2026-04-11T04:00:06Z,Ford,Mustang GT,2001,6793.0,25000.0,manual,yellow,CT,unknown,Wallingford,25000.0,17039.7
+7926731711,2026-04-11T04:00:06Z,Chevrolet,Chevelle SS,1967,500.0,75000.0,manual,blue,CT,unknown,Wallingford,75000.0,22582.29
+7926398708,2026-04-11T05:00:08Z,subaru,Crosstrek 2.0i Limited AWD,2018,124927.0,11900.0,automatic,orange,CT,6450.0,Meriden,11900.0,12115.69
+7926735595,2026-04-11T04:00:06Z,Dodge,Neon,2002,150000.0,3288.0,automatic,unknown,CT,unknown,Wallingford,3288.0,7716.93
+7925910184,2026-04-11T04:00:06Z,BMW,X2,2018,79633.0,15500.0,automatic,black,CT,6606.0,Bridgeport,15500.0,14715.83
+7926039400,2026-04-11T05:00:08Z,KIA,OPTIMA LX,2014,108500.0,7000.0,automatic,black,CT,unknown,NORTH BRANFORD,7000.0,10433.2
+7926151746,2026-04-11T04:00:06Z,chevrolet,silverado 2500hd,2018,149053.0,25900.0,automatic,white,CT,6450.0,Meriden,25900.0,12352.31
+7926456208,2026-04-11T04:00:06Z,acura,tlx,2022,30000.0,2000.0,automatic,unknown,CT,unknown,North Haven,2000.0,12688.82
+7926722585,2026-04-11T05:00:08Z,Honda,Odyssey EX-L,2008,150000.0,5500.0,automatic,unknown,CT,unknown,West Hartford,5500.0,9449.19
+7926743179,2026-04-11T04:00:06Z,Honda,Civic LX,2003,194000.0,2850.0,automatic,silver,CT,unknown,Branford,2850.0,9087.31
+7926450869,2026-04-11T05:00:08Z,Nissan,Sentra,2012,120000.0,5000.0,automatic,red,CT,unknown,Derby,5000.0,9376.93
+7926295610,2026-04-11T05:00:08Z,volkswagen,tiguan,2016,73500.0,7500.0,automatic,white,CT,unknown,New Haven,7500.0,11845.05
+7926472431,2026-04-11T05:00:08Z,jeep,grand cherokee,2019,90000.0,,automatic,unknown,NJ,unknown,South Orange,,16744.66
+7926520164,2026-04-11T05:00:08Z,toyota,corolla,2009,170000.0,3950.0,automatic,black,CT,unknown,Waterbury,3950.0,10066.12
+7925910040,2026-04-11T05:00:08Z,CHEVROLET,CHEVELLE,1966,59985.0,69500.0,automatic,grey,CT,6606.0,Bridgeport,69500.0,21374.07
+7926707638,2026-04-11T05:00:08Z,FORD,EXPLORER SPORTS TRAC LIMITED,2007,159000.0,4500.0,automatic,silver,CT,unknown,Shelton,4500.0,9274.55
+7925890250,2026-04-11T04:00:06Z,Dodge,Durango,2020,69000.0,,automatic,unknown,NJ,unknown,South Orange,,16178.3
+7925910209,2026-04-11T04:00:06Z,Dodge,Grand Caravan,2016,48019.0,12850.0,automatic,blue,CT,6606.0,Bridgeport,12850.0,13797.36
+7925980488,2026-04-11T05:00:08Z,ford,pick up,1966,60000.0,3500.0,automatic,red,CT,unknown,Waterbury,3500.0,15235.71
+7926653231,2026-04-11T05:00:08Z,Dodge,Grand Caravan,2014,123538.0,21000.0,automatic,white,CT,unknown,Greenwich,21000.0,9679.96
+7926677626,2026-04-11T04:00:06Z,subaru,outback 2.5i premium,2015,171000.0,6800.0,automatic,blue,CT,unknown,Shelton,6800.0,9305.11
+7926886300,2026-04-11T05:00:08Z,Honda,CRV EX,2000,133000.0,2946.0,automatic,silver,CT,unknown,Stratford,2946.0,9218.8
+7926388127,2026-04-11T05:00:08Z,toyota,highlander,2019,99548.0,23900.0,automatic,white,CT,6450.0,Meriden,23900.0,12774.62
+7926815406,2026-04-11T05:00:08Z,MAZDA,6 GRAND TOURING 'S',2009,115508.0,4995.0,automatic,silver,CT,unknown,North Branford,4995.0,9752.74
+7926892627,2026-04-11T05:00:08Z,Acura,TLX a-spec,2022,24000.0,,automatic,red,CT,unknown,North Haven,,12507.05
+7926958773,2026-04-11T04:00:06Z,Land Rover,Range Rover,2018,101615.0,31900.0,automatic,black,CT,6606.0,Bridgeport,31900.0,14680.91
+7926963638,2026-04-11T05:00:08Z,Dodge,Neon,2002,150000.0,3288.0,automatic,unknown,CT,unknown,Wallingford,3288.0,7716.93
+7926981140,2026-04-11T04:00:06Z,Ford,Transit 250,2017,77000.0,20000.0,automatic,white,CT,unknown,Wallingford,20000.0,12148.27
+7926991399,2026-04-11T05:00:08Z,toyota,4runner,1993,230000.0,4500.0,automatic,unknown,CT,unknown,Derby,4500.0,9380.39
