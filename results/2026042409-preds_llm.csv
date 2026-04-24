@@ -1,0 +1,4 @@
+post_id,scraped_at,make,model,year,mileage,price,transmission,color,state,zip_code,city,actual_price,pred_price
+7926305942,2026-04-24T04:00:31Z,Ford,Mustang GT,2001,6793.0,25000.0,manual,yellow,CT,unknown,Wallingford,25000.0,18912.73
+7926317186,2026-04-24T04:00:31Z,Ford,F-150,2016,178733.0,,automatic,red,CT,6460.0,Milford,,11323.27
+7927019087,2026-04-24T04:00:31Z,Honda,Civic,2013,112885.0,9999.0,automatic,blue,NH,unknown,Manchester,9999.0,18140.29
